@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <<meta http-equiv="refresh" content="30"> -->
+	<!-- PAGE TITLE HERE -->
+	<title>Admin</title>
+	<!-- <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- Style css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/edit.css" rel="stylesheet">
+    <link href="css/led.css" rel="stylesheet">
+</head>
+<body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="waviy">
+		   <span style="--i:1">L</span>
+		   <span style="--i:2">o</span>
+		   <span style="--i:3">a</span>
+		   <span style="--i:4">d</span>
+		   <span style="--i:5">i</span>
+		   <span style="--i:6">n</span>
+		   <span style="--i:7">g</span>
+		   <span style="--i:8">.</span>
+		   <span style="--i:9">.</span>
+		   <span style="--i:10">.</span>
+		</div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+				<i class="fa-brands fa-slack" width="53" height="53" viewBox="0 0 53 53"></i>
+				<p class="brand-title" width="124px" height="33px"  style="font-size: 30px;">IOT</p>
+            </a>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+		
+		<!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+							<div class="dashboard_bar">
+                                Dashboard 
+                            </div>
+                        </div>
+						
+                        <ul class="navbar-nav header-right">
+							<div class="all-live" >
+							<li class="nav-item"><spn  class="live"> Live </spn>   <div class="indicator"></div> </li> 
+							</div>
+							<li class="nav-item">
+								<a href="https://www.aqi.in/ar" class="btn btn-primary d-sm-inline-block d-none">Air Quality Monitoring Map  <i class="fa-solid fa-map-location-dot"></i></a>
+							</li>
+                        </ul>
+                    </div>
+				</nav>
+			</div>
+		</div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="dlabnav">
+            <div class="dlabnav-scroll">
+				<ul class="metismenu" id="menu">
+					<li class="dropdown header-profile">
+						<a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
+							<img src="images/ion/por.jpg" width="20" alt=""/>
+							<div class="header-info ms-3">
+								<span class="font-w600 ">Hi,<b>Team</b></span>
+								<small class="text-end font-w400">team@gmail.com</small>
+							</div>
+						</a>
+						
+					</li>
+                   <li><a href="#Dashboard" aria-expanded="false">
+						<i class="fa-solid fa-table-cells-large"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+                    </li>
+                    <li><a href="#Charts" aria-expanded="false">
+							<!-- <i class="flaticon-041-graph"></i> -->
+							<i class="fa-solid fa-chart-line"></i>
+							<span class="nav-text">Charts</span>
+						</a>
+                    </li>
+                    <li><a href="javascript:void()" aria-expanded="false">
+							<!-- <i class="flaticon-045-heart"></i> -->
+							<i class="fa-solid fa-heart"></i>
+							<span class="nav-text">Plugins</span>
+						</a>
+                    </li>
+                    <li><a href="javascript:void()" aria-expanded="false">
+							<!-- <i class="flaticon-072-printer"></i> -->
+							<i class="fa-solid fa-print"></i>
+							<span class="nav-text">Forms</span>
+						</a>
+                    </li>
+                    <li><a href="javascript:void()" aria-expanded="false">
+							<!-- <i class="flaticon-043-menu"></i> -->
+							<i class="fa-solid fa-bars"></i>
+							<span class="nav-text">Table</span>
+						</a>
+                    </li>
+                </ul>
+			</div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+		
+		<!--**********************************
+            Content body start
+        ***********************************-->
+        <div id="Dashboard" class="content-body">
+            <!-- row -->
+			<div class="container-fluid">
+				<div class="row invoice-card-row">
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card bg-warning invoice-card">
+							<div class="card-body d-flex">
+								<div class="icon me-3">
+								<nav class="logo">	<i class="fa-solid fa-temperature-three-quarters"></i></nav>
+								</div>
+								<div id="weather-data">
+									<h2 class="text-white invoice-num">25°C</h2>
+									<span class="text-white fs-18">Temperature</span>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------------------------  -->
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card bg-success invoice-card">
+							<div class="card-body d-flex">
+								<div class="icon me-3">
+									<nav class="logo"><i class="fa-solid fa-brain"></i></i></nav>
+									
+								</div>
+								<div id="co2-data">
+									<h2 class="text-white invoice-num">200 %</h2>
+									<span class="text-white fs-18"> humidity</span>
+									 
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------------------------  -->
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card bg-info invoice-card">
+							<div class="card-body d-flex">
+								<div class="icon me-3">
+									<nav class="logo"><i class="fa-solid fa-snowflake"></i></nav>
+								</div>
+								<div id="no2-data">
+									<h2 class="text-white invoice-num">40 ppm</h2>
+									<span class="text-white fs-18">co</span>
+									 
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------------------------  -->
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card bg-secondary invoice-card">
+							<div class="card-body d-flex">
+								<div class="icon me-3">
+								<nav class="logo">	<i class="fa-solid fa-biohazard"></i></nav>
+								</div>
+								<div id="ch4-data">
+									<h2 class="text-white invoice-num">1.8 ppm</h2>
+									<span class="text-white fs-18">CH4</span>
+									 
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ----------------------------------------------------------  -->
+					<div class="col-xl-3 col-xxl-3 col-sm-6">
+						<div class="card bg-warning invoice-card">
+							<div class="card-body d-flex">
+								<div class="icon me-3">
+									<nav class="logo"><i class="fa-solid fa-head-side-mask"></i></nav>
+								</div>
+								<div id="pm25-data">
+									<h2 class="text-white invoice-num">22 ppm</h2>
+									<span class="text-white fs-18">H</span>
+									 
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- ----------------------------------------------------------  -->
+				<div class="col-xl-3 col-xxl-3 col-sm-6">
+					<div class="card bg-success invoice-card">
+						<div class="card-body d-flex">
+							<div class="icon me-3">
+								<nav class="logo"><i class="fa-solid fa-virus-covid"></i></nav>
+							</div>
+							<div id="pm10-data">
+								<h2 class="text-white invoice-num">35 ppm</h2>
+								<span class="text-white fs-18"> OH</span>
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ----------------------------------------------------------  -->
+				<div class="col-xl-3 col-xxl-3 col-sm-6">
+					<div class="card bg-info invoice-card">
+						<div class="card-body d-flex">
+							<div class="icon me-3">
+							<nav class="logo"><i class="fa-solid fa-droplet"></i></nav>
+							</div>
+							<div id="aqi-data">
+								<h2 class="text-white invoice-num">60µg/m³</h2>
+								<span class="text-white fs-18">smoke</span>
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ----------------------------------------------------------  -->
+				<!-- <div class="col-xl-3 col-xxl-3 col-sm-6">
+					<div class="card bg-secondary invoice-card">
+						<div class="card-body d-flex">
+							<div class="icon me-3">
+							<nav class="logo"><i class="fa-solid fa-water"></i></nav>
+							</div>
+							<div id="Charts">
+								<h2 class="text-white invoice-num">50 ppm</h2>
+								<span class="text-white fs-18">CO</span>
+								 
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- ----------------------------------------------------------  -->
+				<!-- Chart -->
+				 <div class="card" style="width: 100%;">
+				<div class="chart-container" style="width: 100%;" >
+					<canvas style="width: 100%;" id="gasChart" >
+						
+					</canvas>
+				</div>
+				</div>
+				<!-- الخريطة -->
+				<div class="card" >
+				<div class="chart-container" style="width: 100%;" >
+                	<iframe class="chart-container-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.3393743481398!2d31.389011273838044!3d31.070756481832472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7770071961c77%3A0xa40a3d269eb61cce!2z2YXYudmH2K8g2KfZhNiv2YTYqtinINmG2LjZhSDZiNmF2LnZhNmI2YXYp9iq!5e0!3m2!1sar!2seg!4v1747006877750!5m2!1sar!2seg" width="100%" height="350" style="border: 0px;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+					</div>
+			<!--End Chart  -->
+		<!-- START DATA -->
+						<div class="col-xl-6 col-xxl-12">
+				<div class="card" style="background: #e8eaec;">
+							<div class="card-header d-block d-sm-flex border-0">
+								<div class="me-3">
+									<h4 class="card-title mb-2">Previous Readings</h4>
+									<span class="fs-12">This is a comprehensive record of all previous readings</span>
+								</div>
+								<div class="card-tabs mt-3 mt-sm-0">
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" data-bs-toggle="tab" href="#monthly" role="tab">Monthly</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-bs-toggle="tab" href="#Weekly" role="tab">Weekly</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" data-bs-toggle="tab" href="#Today" role="tab">Today</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card-body tab-content p-0">
+								<div class="tab-pane active show fade" id="monthly" role="tabpanel">
+									<div class="table-responsive">
+										<table class="table table-responsive-md card-table transactions-table">
+											<tbody>	
+												<tr>
+													<td>1</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">323.66</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 5, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">230.45</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 5, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">465.14</span></td>
+													<td><span class="text-danger fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">346.21</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">323.66</span></td>
+													<td><span class="text-light fs-16 font-w500 text-end d-block">Pending</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="tab-pane" id="Weekly" role="tabpanel">
+									<div class="table-responsive">
+										<table class="table table-responsive-md card-table transactions-table">
+											<tbody>
+												<td>1</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">323.66</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 5, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">230.45</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 5, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">465.14</span></td>
+													<td><span class="text-danger fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">346.21</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="tab-pane" id="Today" role="tabpanel">
+									<div class="table-responsive">
+										<table class="table table-responsive-md card-table transactions-table">
+											<tbody>
+												<td>1</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">323.66</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 5, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">230.45</span></td>
+													<td><span class="text-success fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>
+														<h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Carbon footprint</a></h6>
+														<span class="fs-14">CO₂-eq</span>
+													</td>
+													<td>
+														<h6 class="fs-16 text-black font-w600 mb-0">June 5, 2020</h6>
+														<span class="fs-14">05:34:45 AM</span>
+													</td>
+													<td><span class="fs-16 text-black font-w600">465.14</span></td>
+													<td><span class="text-danger fs-16 font-w500 text-end d-block">Completed</span></td>
+												</tr>
+												<tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END DATA -->
+					<div class="custom-container mt-4">
+						<div class="custom-card">
+							<div class="custom-header">
+								<div class="alk-1">
+								<h4 class="custom-title">Previous Readings</h4>
+								<span class="sp-1">This is a comprehensive record of all previous readings</span>
+							</div>
+								<ul class="custom-tabs">
+									<li><a href="#" class="custom-tab-link active" data-target="#custom-monthly">Monthly</a></li>
+									<li><a href="#" class="custom-tab-link" data-target="#custom-weekly">Weekly</a></li>
+									<li><a href="#" class="custom-tab-link" data-target="#custom-daily">Today</a></li>
+								</ul>
+							</div>
+							<div class="custom-body">
+					
+								<!-- القراءات الشهرية -->
+								<div class="custom-content active" id="custom-monthly">
+									<table class="custom-table">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Temperature</th>
+												<th>Humidity</th>
+												<th>CO</th>
+												<th>CH4</th>
+												<th>H₂</th>
+												<th>OH</th>
+												<th>Smoke</th>
+												<th>CO2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>25°C</td>
+												<td>60%</td>
+												<td>40ppm</td>
+												<td>1.8ppm</td>
+												<td>22ppm</td>
+												<td>35ppm</td>
+												<td>60ppm</td>
+												<td>50ppm</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+					
+								<!-- القراءات الأسبوعية -->
+								<div class="custom-content" id="custom-weekly">
+									<table class="custom-table">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Temperature</th>
+												<th>Humidity</th>
+												<th>CO</th>
+												<th>CH4</th>
+												<th>H₂</th>
+												<th>OH</th>
+												<th>Smoke</th>
+												<th>CO2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>30°C</td>
+												<td>60%</td>
+												<td>40ppm</td>
+												<td>1.8ppm</td>
+												<td>22ppm</td>
+												<td>35ppm</td>
+												<td>60ppm</td>
+												<td>50ppm</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+					
+								<!-- القراءات اليومية -->
+								<div class="custom-content" id="custom-daily">
+									<table class="custom-table">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Temperature</th>
+												<th>Humidity</th>
+												<th>CO</th>
+												<th>CH4</th>
+												<th>H₂</th>
+												<th>OH</th>
+												<th>Smoke</th>
+												<th>CO2</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>40°C</td>
+												<td>60%</td>
+												<td>40ppm</td>
+												<td>1.8ppm</td>
+												<td>22ppm</td>
+												<td>35ppm</td>
+												<td>60ppm</td>
+												<td>50ppm</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- --------------------------------------- -->
+					<!-- Chart -->
+				 <div  class="card">
+				<div class="chart-container">
+					<canvas id="airQualityChart"></canvas>
+				</div>
+			</div>
+			<!--End Chart  -->
+				<!-- ---------------------------------------------------- -->
+					<div class="col-xl-6 col-xxl-12">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="card coin-card">
+									<div class="card-body d-sm-flex d-block align-items-center">
+										<span class="coin-icon">
+											<nav class="logo"><i class="fa-brands fa-slack"></i></nav>
+										</span>
+										<div>
+											<h3 class="text-white">Air Quality Monitoring Using the Internet of Things (IoT)</h3>
+											<p>Air quality monitoring is becoming increasingly important due to the adverse effects of air pollution on human health and the environment. The integration of the Internet of Things (IoT) has revolutionized this field by enabling real-time, efficient, and scalable air quality monitoring solutions. IoT-based systems leverage interconnected sensors to measure various air quality parameters such as particulate matter (PM2.5, PM10), carbon dioxide (CO2), carbon monoxide (CO), nitrogen dioxide (NO2), sulfur dioxide (SO2), ozone (O3), and temperature and humidity levels.
+
+												These sensors are deployed across urban and rural areas, creating a network that continuously collects data. The data is transmitted to cloud-based platforms via wireless communication technologies like Wi-Fi, LoRa, or cellular networks. Advanced analytics and machine learning algorithms process this data to provide insights, visualize trends, and predict pollution patterns. This helps policymakers, industries, and individuals make informed decisions to mitigate pollution and protect public health.
+												
+												IoT-enabled air quality monitoring offers several advantages, including cost-effectiveness, real-time updates, and accessibility. It is widely applied in smart cities, industrial zones, and environmental conservation projects. As technology evolves, these systems are becoming more accurate and energy-efficient, paving the way for a cleaner and healthier future.</p>
+											<a class="text-white" href="javascript:void(0);">Learn more >></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+		
+		
+		
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+		
+            <div class="copyright">
+                <p>© Designed &amp; by <a href="#" target="_blank">	One Team</a> 2025</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+	</div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="vendor/global/global.min.js"></script>
+	<script src="vendor/chart.js/Chart.bundle.min.js"></script> <!--مكتبة الرسم البياني	 -->
+	<!--  Dashboard 1 -->
+	<script src="js/edit.js"></script> 
+	<script src="js/custom.min.js"></script> 
+	<script src="js/dlabnav-init.js"></script>      <!-- لفتح وغلق قائمة الاختصارات -->
+	<script src="js/demo.js"></script>              <!-- ✔️ يسمح للمستخدم بتغيير تصميم الموقع بسهولة. ✔️ يحفظ خيارات المظهر حتى بعد إغلاق المتصفح. ✔️  يدعم للغات مثل العربية. ✔️ يوفر عدة ثيمات جاهزة يمكن للمستخدم الاختيار من بينها. -->
+    <script src="./js/Chart.js"></script>            <!--الرسم البياني -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="js/charttest.js"></script>           <!-- الرسم البياني -->
+<script>
+    fetch('getData.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('weather-data').innerHTML = data.match(/<div id='Temperature'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('co2-data').innerHTML = data.match(/<div id='humidity'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('no2-data').innerHTML = data.match(/<div id='co'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('ch4-data').innerHTML = data.match(/<div id='ch4'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('pm25-data').innerHTML = data.match(/<div id='h'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('pm10-data').innerHTML = data.match(/<div id='oh'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('aqi-data').innerHTML = data.match(/<div id='smoke'>[\s\S]*?<\/div>/)?.[0] || '';
+            document.getElementById('Charts').innerHTML = data.match(/<div id='co2'>[\s\S]*?<\/div>/)?.[0] || '';
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+</body>
+
+</html>
